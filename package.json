@@ -1,11 +1,17 @@
 {
     "name": "solidbase-utils-object",
-    "version": "0.0.1",
+    "version": "0.0.4",
     "description": "Biblioteca com funções utilitárias para objetos",
-    "main": "src/index.ts",
+    "main": "lib/index.js",
+    "types": "lib/index.d.ts",
     "files": [
         "lib/**/*"
     ],
+    "keywords": [
+        "Deph Equal",
+        "Deph Merge"
+    ],
+    "author": "Guilherme Luiz",
     "devDependencies": {
         "prettier": "^2.7.1",
         "tslint": "^6.1.3",
