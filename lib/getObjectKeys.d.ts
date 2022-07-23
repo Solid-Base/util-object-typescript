@@ -1,7 +1,7 @@
 declare type DTO = Record<string, any>;
 declare type LiteralType = string | number | boolean | bigint;
 declare type GetDirtyDTOKeys<O extends DTO> = {
-    [K in keyof O]-?: NonNullable<O[K]> extends Array<infer A> ? (NonNullable<A> extends LiteralType ? K : Extract<K, string> | (K extends string ? (GetDirtyDTOKeys<NonNullable<A>> extends infer NK ? (NK extends string ? `${K}.${NK}` : never) : never) : K)) : (NonNullable<O[K]> extends LiteralType ? K : Extract<K, string> | (K extends string ? (GetDirtyDTOKeys<NonNullable<O[K]>> extends infer NK ? (NK extends string ? `${K}.${NK}` : never) : never) : never));
+    [K in keyof O]-?: NonNullable<O[K]> extends Array<infer A> ? NonNullable<A> extends LiteralType ? K : Extract<K, string> | (K extends string ? GetDirtyDTOKeys<NonNullable<A>> extends infer NK ? NK extends string ? `${K}.${NK}` : never : never : K) : NonNullable<O[K]> extends LiteralType ? K : Extract<K, string> | (K extends string ? GetDirtyDTOKeys<NonNullable<O[K]>> extends infer NK ? NK extends string ? `${K}.${NK}` : never : never : never);
 }[keyof O];
 declare type AllDTOKeys = string | number | symbol;
 declare type TrashDTOKeys = `${string}.undefined` | number | symbol;

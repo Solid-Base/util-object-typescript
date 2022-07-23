@@ -1,6 +1,6 @@
 declare const is: {
     isDateObject: (value: unknown) => value is Date;
-    isFunction: (value: unknown) => value is Function;
+    isFunction: (value: unknown) => value is () => void;
     isNullOrUndefined: (value: unknown) => value is null | undefined;
     isObject: <T extends object>(value: unknown) => value is T;
     isObjectType: (value: unknown) => boolean;
