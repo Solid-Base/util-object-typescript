@@ -30,8 +30,8 @@ export function deepEqual(object1: any, object2: any) {
 
       if (
         (isDateObject(val1) && isDateObject(val2)) ||
-          (isObject(val1) && isObject(val2)) ||
-          (Array.isArray(val1) && Array.isArray(val2))
+        (isObject(val1) && isObject(val2)) ||
+        (Array.isArray(val1) && Array.isArray(val2))
           ? !deepEqual(val1, val2)
           : val1 !== val2
       ) {
