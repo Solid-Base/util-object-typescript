@@ -2,7 +2,7 @@ import isObject from './is/isObject';
 import isDateObject from './is/isDateObject';
 import isPrimitive from './is/isPrimitive';
 
-export default function deepEqual(object1: any, object2: any) {
+export function deepEqual(object1: any, object2: any) {
   if (isPrimitive(object1) || isPrimitive(object2)) {
     return object1 === object2;
   }
@@ -30,8 +30,8 @@ export default function deepEqual(object1: any, object2: any) {
 
       if (
         (isDateObject(val1) && isDateObject(val2)) ||
-        (isObject(val1) && isObject(val2)) ||
-        (Array.isArray(val1) && Array.isArray(val2))
+          (isObject(val1) && isObject(val2)) ||
+          (Array.isArray(val1) && Array.isArray(val2))
           ? !deepEqual(val1, val2)
           : val1 !== val2
       ) {
