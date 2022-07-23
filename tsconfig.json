@@ -1,0 +1,33 @@
+{
+    "compilerOptions": {
+        "sourceMap": true,
+        "module": "es2015",
+        "target": "es2018",
+        "jsx": "react",
+        "moduleResolution": "node",
+        "outDir": "./lib",
+        "skipLibCheck": true,
+        "declaration": true,
+        "declarationMap": true,
+        "esModuleInterop": true,
+        "lib": [
+            "dom",
+            "dom.iterable",
+            "esnext"
+        ],
+        "strict": true,
+        "noUnusedLocals": true,
+        "noUnusedParameters": true,
+        "noImplicitReturns": true,
+        "noImplicitAny": true,
+        "allowJs": true,
+        "noFallthroughCasesInSwitch": true
+    },
+    "include": [
+        "src"
+    ],
+    "exclude": [
+        "node_modules",
+        "**/*.spec.ts",
+    ],
+}
