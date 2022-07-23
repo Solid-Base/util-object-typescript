@@ -4,10 +4,4 @@ import deepMerge from './deepMerge';
 import getObjectKey from './getObjectKeys';
 import omitKeys from './omitKeys';
 
-export default {
-  cloneObject,
-  deepEqual,
-  deepMerge,
-  getObjectKey,
-  omitKeys,
-};
+export { cloneObject, deepEqual, deepMerge, getObjectKey, omitKeys };
