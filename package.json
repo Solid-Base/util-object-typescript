@@ -1,5 +1,5 @@
 {
-    "name": "solidbase-utils-object",
+    "name": "@solidbase/object",
     "version": "0.0.59",
     "description": "Biblioteca com funções utilitárias para objetos",
     "main": "lib/index.js",
