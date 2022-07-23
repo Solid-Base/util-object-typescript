@@ -4,4 +4,4 @@ import deepMerge from './deepMerge';
 import getObjectKey from './getObjectKeys';
 import omitKeys from './omitKeys';
 
-export { cloneObject, deepEqual, deepMerge, getObjectKey, omitKeys };
+export const UtilsObject = { cloneObject, deepEqual, deepMerge, getObjectKey, omitKeys };
